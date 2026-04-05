@@ -40,7 +40,7 @@ export function useLocalStorage<T>(key: string, initial: T) {
 
 export function useCopyToClipboard() {
   const [copied, setCopied] = useState(false);
-  const timer = useRef<ReturnType<typeof setTimeout>>();
+  const timer = useRef<ReturnType<typeof setTimeout> | undefined>(undefined);
 
   const copy = (text: string) => {
     navigator.clipboard.writeText(text).then(() => {
