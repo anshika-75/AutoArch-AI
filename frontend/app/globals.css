@@ -237,6 +237,15 @@ body::before {
   height: auto;
 }
 
+/* Hide scrollbar on tabs */
+.tabs-scroll {
+  scrollbar-width: none;
+  -ms-overflow-style: none;
+}
+.tabs-scroll::-webkit-scrollbar {
+  display: none;
+}
+
 /* Tab styles */
 .tab-btn {
   padding: 8px 18px;
@@ -270,7 +279,137 @@ body::before {
   color: #c9d1d9;
 }
 
-/* Responsive */
+/* ======== MOBILE RESPONSIVE ======== */
+
+/* Tablets and below */
 @media (max-width: 768px) {
   .section-card { padding: 16px; }
+
+  /* Navbar */
+  header > div {
+    padding: 12px 16px !important;
+  }
+  header nav {
+    gap: 6px !important;
+  }
+  header nav button,
+  header nav a {
+    padding: 6px 10px !important;
+    font-size: 12px !important;
+  }
+
+  /* Input section */
+  main > section {
+    padding: 60px 16px 40px !important;
+  }
+  main > section h1 {
+    font-size: 1.8rem !important;
+    letter-spacing: -0.5px !important;
+  }
+  main > section p {
+    font-size: 14px !important;
+  }
+  main > section textarea {
+    font-size: 14px !important;
+    min-height: 120px !important;
+  }
+
+  /* Generate button area */
+  main > section > div > div:last-child {
+    flex-wrap: wrap;
+  }
+
+  /* Example prompts grid */
+  main > section > div > div[style*="grid"] {
+    grid-template-columns: 1fr !important;
+    gap: 8px !important;
+  }
+
+  /* Tabs - horizontal scroll */
+  .tab-btn {
+    padding: 6px 12px;
+    font-size: 12px;
+  }
+
+  /* Results panel */
+  #results-section {
+    padding: 0 8px;
+  }
+
+  /* Mermaid diagram */
+  .mermaid-container {
+    padding: 12px !important;
+  }
+  .mermaid-container svg {
+    max-width: 100%;
+    height: auto;
+    min-width: 0;
+  }
+
+  /* Footer */
+  footer {
+    padding: 24px 16px !important;
+  }
+
+  /* Code blocks */
+  .code-block {
+    padding: 12px;
+    font-size: 11px;
+  }
+
+  /* Loading skeleton */
+  .pulse-glow {
+    padding: 20px 24px !important;
+  }
 }
+
+/* Small phones */
+@media (max-width: 480px) {
+  main > section {
+    padding: 40px 12px 32px !important;
+  }
+  main > section h1 {
+    font-size: 1.5rem !important;
+  }
+
+  .badge {
+    font-size: 10px;
+    padding: 2px 8px;
+  }
+
+  .btn-primary {
+    padding: 10px 18px;
+    font-size: 13px;
+    width: 100%;
+    justify-content: center;
+  }
+
+  .btn-ghost {
+    padding: 6px 12px;
+    font-size: 12px;
+  }
+
+  .section-card {
+    padding: 12px;
+    border-radius: 12px;
+  }
+
+  .tab-btn {
+    padding: 5px 10px;
+    font-size: 11px;
+  }
+
+  /* Stack file upload and voice button */
+  main > section > div > div[style*="flex"] {
+    flex-direction: column;
+  }
+}
+
+/* Ensure touch-friendly targets */
+@media (pointer: coarse) {
+  .btn-primary, .btn-ghost, .tab-btn, button {
+    min-height: 44px;
+    min-width: 44px;
+  }
+}
+

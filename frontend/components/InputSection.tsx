@@ -73,7 +73,7 @@ export default function InputSection({ onSubmit, loading }: InputSectionProps) {
       {/* Header */}
       <div style={{ textAlign: 'center', marginBottom: 40 }}>
         <div className="badge badge-indigo" style={{ marginBottom: 16 }}>
-          <Sparkles size={10} /> Powered by Llama 3.3
+          <Sparkles size={10} /> Developed by Anshika
         </div>
         <h1 style={{ fontSize: 'clamp(2rem, 5vw, 3.5rem)', fontWeight: 900, lineHeight: 1.1, letterSpacing: '-1.5px', marginBottom: 16 }}>
           Describe your project,<br />

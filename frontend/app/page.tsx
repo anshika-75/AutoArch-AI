@@ -76,7 +76,7 @@ export default function HomePage() {
               <div>
                 <p style={{ fontWeight: 700, fontSize: 16, marginBottom: 4 }}>Analyzing your project...</p>
                 <p style={{ fontSize: 13, color: 'var(--text-secondary)' }}>
-                  Llama 3.3 is designing your architecture. This takes 10-20 seconds.
+                  AI is designing your architecture. This takes 10-20 seconds.
                 </p>
               </div>
               {/* Skeleton rows */}
@@ -111,7 +111,7 @@ export default function HomePage() {
           borderTop: '1px solid var(--border)', color: 'var(--text-muted)', fontSize: 12,
         }}>
           <p>ArchGen AI — Built to help developers design better systems faster.</p>
-          <p style={{ marginTop: 4 }}>Powered by Groq + Llama 3.3 • React + Next.js • Node.js + Express</p>
+          <p style={{ marginTop: 4 }}>Developed by Anshika</p>
         </footer>
       )}
 

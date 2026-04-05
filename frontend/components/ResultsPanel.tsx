@@ -104,9 +104,9 @@ export default function ResultsPanel({ id, data }: ResultsPanelProps) {
       </div>
 
       {/* Tabs */}
-      <div style={{
+      <div className="tabs-scroll" style={{
         display: 'flex', gap: 4, overflowX: 'auto', paddingBottom: 4,
-        marginBottom: 24, scrollbarWidth: 'none',
+        marginBottom: 24, WebkitOverflowScrolling: 'touch',
       }}>
         {TABS.map(tab => (
           <button
